@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최근 본 상품 - 주식회사 트립페이지</title>
+    <meta name="description" content="최근 본 상품 내역을 확인하세요. 주식회사 트립페이지에서 방문한 상품들을 한눈에 볼 수 있습니다.">
+    <meta name="keywords" content="최근본상품, 주식회사 트립페이지, 최근 본 상품">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/trippage-modal.css" rel="stylesheet">
+</head>
+<body class="theme05">
+    <!-- 전체상품목록 바로가기 -->
+    <div class="skip_navi">
+        <a href="#category">전체상품목록 바로가기</a>
+    </div>
+    
+    <!-- 본문 바로가기 -->
+    <div class="skip_navi">
+        <a href="#contents">본문 바로가기</a>
+    </div>
+
+    <!-- 쿠폰 배너 -->
+    <div class="coupon_banner">
+        <a href="#" class="coupon_link">첫 쇼핑을 지원하는 3,000원 할인 회원가입 쿠폰</a>
+        <div class="coupon_options">
+            <label><input type="checkbox" id="hideToday"> 오늘 하루 보지 않기</label>
+            <button type="button" class="close_btn">닫기</button>
+        </div>
+    </div>
+
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="header_top">
+            <div class="toparea_state" data-ez-group="top-util-menu" data-ez-role="list">
+                <a href="javascript:;" class="xans-element- xans-layout xans-layout-statelogoff" id="loginBtn">로그인/회원가입</a>
+                <a href="/myshop/order/list.html">주문조회</a>
+                <a href="/product/recent_view_product.html">최근본상품</a>
+                <a href="#none">고객센터</a>
+            </div>
+        </div>
+        
+        <div class="header_main">
+            <div class="logo_area">
+                <h1><a href="/">주식회사 트립페이지</a></h1>
+            </div>
+            
+            <nav class="gnb">
+                <ul>
+                    <li><a href="category-accommodation.html">숙박</a></li>
+                    <li><a href="category-transportation.html">교통</a></li>
+                    <li><a href="category-tour.html">투어</a></li>
+                    <li><a href="category-activity.html">액티비티</a></li>
+                    <li><a href="category-performance.html">공연/티켓</a></li>
+                    <li><a href="category-etc.html">기타</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header_icons">
+                <a href="javascript:;" class="search_btn"><img src="images/search-icon.png" alt="검색"></a>
+                <a href="/myshop/index.html" class="mypage_btn"><img src="images/mypage-icon.png" alt="마이페이지"></a>
+                <a href="/order/basket.html" class="cart_btn"><img src="images/cart-icon.png" alt="장바구니"><span class="cart_count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main id="contents">
+        <!-- 현재 위치 -->
+        <div class="location">
+            <span class="current_location">현재 위치</span>
+            <ul>
+                <li><a href="/">홈</a></li>
+                <li><strong>/ 최근 본 상품</strong></li>
+            </ul>
+        </div>
+
+        <!-- 최근 본 상품 섹션 -->
+        <section class="recent_products">
+            <h2>최근 본 상품</h2>
+            <p class="no_products">최근본 상품 내역이 없습니다.</p>
+            
+            <!-- 쇼핑 정보 -->
+            <div class="shopping_info">
+                <h3>나의 쇼핑 정보</h3>
+                <ul>
+                    <li><a href="/myshop/order/list.html">주문내역 조회</a></li>
+                    <li><a href="/myshop/mileage/historyList.html">적립금 내역</a></li>
+                    <li><a href="/myshop/coupon/coupon.html">쿠폰 내역</a></li>
+                    <li><a href="/myshop/addr/list.html">배송 주소록 관리</a></li>
+                </ul>
+                
+                <h3>활동 정보</h3>
+                <ul>
+                    <li><a href="/product/recent_view_product.html">최근 본 상품</a></li>
+                    <li><a href="/myshop/wish_list.html">나의 위시리스트</a></li>
+                    <li><a href="/myshop/board_list.html">나의 게시글</a></li>
+                </ul>
+                
+                <h3>나의 정보</h3>
+                <ul>
+                    <li><a href="/member/modify.html">회원 정보 수정</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="footer_logo">
+                <a href="/">주식회사 트립페이지</a>
+            </div>
+            
+            <nav class="footer_nav">
+                <ul>
+                    <li><a href="/shopinfo/company.html">회사소개</a></li>
+                    <li><a href="/member/mall_agreement.html">이용약관</a></li>
+                    <li><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="/shopinfo/guide.html">이용안내</a></li>
+                </ul>
+            </nav>
+            
+            <div class="company_info">
+                <div class="info_section">
+                    <h4>쇼핑몰 기본정보</h4>
+                    <dl>
+                        <dt>상호명</dt>
+                        <dd>주식회사 트립페이지</dd>
+                        <dt>대표자명</dt>
+                        <dd>최현욱, 노형백</dd>
+                        <dt>사업장 주소</dt>
+                        <dd>61912 광주 서구 상무버들로 35 2층 201호(유촌동)</dd>
+                        <dt>대표 전화</dt>
+                        <dd>010-9767-3366</dd>
+                        <dt>사업자 등록번호</dt>
+                        <dd>813-88-03018</dd>
+                        <dt>통신판매업 신고번호</dt>
+                        <dd></dd>
+                        <dt>개인정보보호책임자</dt>
+                        <dd>최현욱</dd>
+                    </dl>
+                </div>
+                
+                <div class="info_section">
+                    <h4>고객센터 정보</h4>
+                    <dl>
+                        <dt><strong>상담/주문 전화</strong></dt>
+                        <dd>010-9767-3366</dd>
+                        <dt><strong>상담/주문 이메일</strong></dt>
+                        <dd>trippage@naver.com</dd>
+                        <dt><strong>CS운영시간</strong></dt>
+                        <dd></dd>
+                    </dl>
+                </div>
+                
+                <div class="info_section">
+                    <h4>결제정보</h4>
+                    <dt><strong>무통장 계좌정보</strong></dt>
+                    <dl>
+                        <dt>은행</dt>
+                        <dd>0000-000-00000</dd>
+                        <dt>예금주</dt>
+                        <dd></dd>
+                    </dl>
+                </div>
+            </div>
+            
+            <div class="footer_bottom">
+                <p class="copyright">Copyright © 주식회사 트립페이지. All Rights Reserved. Hosting by Cafe24 Corp.</p>
+                
+                <div class="sns_links">
+                    <span>SNS</span>
+                    <a href="https://instagram.com/" target="_blank"><img src="images/instagram-icon.png" alt="instagram">instagram</a>
+                    <a href="https://youtube.com/" target="_blank"><img src="images/youtube-icon.png" alt="youtube">youtube</a>
+                    <a href="https://facebook.com/" target="_blank"><img src="images/facebook-icon.png" alt="facebook">facebook</a>
+                    <a href="https://pf.kakao.com/" target="_blank"><img src="images/kakao-icon.png" alt="kakao">kakao</a>
+                    <a href="https://twitter.com/" target="_blank"><img src="images/twitter-icon.png" alt="twitter">twitter</a>
+                    <a href="https://blog.naver.com/" target="_blank"><img src="images/blog-icon.png" alt="blog">blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 로그인/회원가입 모달 -->
+    <div class="auth-modal" id="authModal">
+        <div class="auth-modal-content">
+            <div class="auth-modal-header">
+                <h2>로그인/회원가입</h2>
+                <button class="auth-close-btn" id="authCloseBtn">&times;</button>
+            </div>
+            
+            <div class="auth-modal-body">
+                <!-- 이메일 입력 단계 -->
+                <div class="auth-step" id="emailStep">
+                    <div class="auth-step-title">
+                        <h3>안녕하세요!</h3>
+                        <p>트립페이지에 오신 것을 환영합니다</p>
+                    </div>
+                    <form class="auth-form" id="emailForm">
+                        <div class="form-group">
+                            <label for="userEmail">이메일</label>
+                            <input type="email" id="userEmail" name="email" placeholder="이메일을 입력해주세요" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        <button type="submit" class="auth-btn primary">계속하기</button>
+                    </form>
+                </div>
+
+                <!-- 로그인 단계 -->
+                <div class="auth-step" id="loginStep">
+                    <div class="auth-step-title">
+                        <h3>비밀번호를 입력해주세요</h3>
+                        <p></p>
+                    </div>
+                    <form class="auth-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="loginPassword">비밀번호</label>
+                            <input type="password" id="loginPassword" name="password" placeholder="비밀번호를 입력해주세요" required>
+                            <div class="error-message" id="loginError"></div>
+                        </div>
+                        <div class="auth-options">
+                            <label><input type="checkbox" name="remember"> 로그인 상태 유지</label>
+                            <a href="#" class="forgot-password">비밀번호 찾기</a>
+                        </div>
+                        <button type="submit" class="auth-btn primary">로그인</button>
+                    </form>
+                </div>
+
+                <!-- 회원가입 단계 -->
+                <div class="auth-step" id="registerStep">
+                    <div class="auth-step-title">
+                        <h3>회원가입</h3>
+                        <p>트립페이지의 회원이 되어 특별한 혜택을 받아보세요</p>
+                    </div>
+                    <form class="auth-form" id="registerForm">
+                        <div class="form-group">
+                            <label for="userName">이름 <span class="required">*</span></label>
+                            <input type="text" id="userName" name="name" placeholder="이름을 입력해주세요" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userPhone">휴대폰 번호 <span class="required">*</span></label>
+                                <input type="tel" id="userPhone" name="phone" placeholder="010-0000-0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="userAge">나이 <span class="required">*</span></label>
+                                <input type="number" id="userAge" name="age" placeholder="나이" min="1" max="120" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="userGender">성별 <span class="required">*</span></label>
+                            <select id="userGender" name="gender" required>
+                                <option value="">성별을 선택해주세요</option>
+                                <option value="male">남성</option>
+                                <option value="female">여성</option>
+                                <option value="other">기타</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="userPassword">비밀번호 <span class="required">*</span></label>
+                            <input type="password" id="userPassword" name="password" placeholder="6자 이상 입력해주세요" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userPasswordConfirm">비밀번호 확인 <span class="required">*</span></label>
+                            <input type="password" id="userPasswordConfirm" name="passwordConfirm" placeholder="비밀번호를 다시 입력해주세요" required>
+                            <div class="error-message" id="passwordError"></div>
+                        </div>
+                        <div class="auth-agreements">
+                            <label>
+                                <input type="checkbox" name="agreeTerms" required>
+                                <span>이용약관 및 개인정보처리방침에 동의합니다. <span class="required">*</span></span>
+                            </label>
+                        </div>
+                        <button type="submit" class="auth-btn primary">회원가입</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="auth-modal-footer">
+                <p>소셜 계정으로 간편하게 시작하기</p>
+                <div class="social-login-buttons">
+                    <button class="social-btn kakao">카카오</button>
+                    <button class="social-btn naver">네이버</button>
+                    <button class="social-btn google">구글</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/auth-modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+/* Board Styles */
+.board_breadcrumb {
+    background: #f8f9fa;
+    padding: 15px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.board_breadcrumb ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.board_breadcrumb li {
+    margin: 0 5px;
+}
+
+.board_breadcrumb li:first-child {
+    margin-left: 0;
+}
+
+.board_breadcrumb a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.board_breadcrumb a:hover {
+    color: #495057;
+}
+
+.board_breadcrumb strong {
+    color: #212529;
+    font-weight: 600;
+}
+
+/* Board Header */
+.board_header {
+    padding: 40px 0;
+    text-align: center;
+    background: #fff;
+}
+
+.board_header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin: 0 0 15px 0;
+}
+
+.board_header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Board List */
+.board_list {
+    background: #fff;
+    padding: 0 0 40px 0;
+}
+
+.board_table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #dee2e6;
+}
+
+.board_table th {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.board_table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+.board_table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.board_table a {
+    color: #212529;
+    text-decoration: none;
+}
+
+.board_table a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.no_data {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Product Review & Q&A Tables */
+.product_review_table th:nth-child(2),
+.product_qna_table th:nth-child(2) {
+    width: 20%;
+}
+
+.product_review_table td:nth-child(2),
+.product_qna_table td:nth-child(2) {
+    text-align: left;
+}
+
+/* Board Search */
+.board_search {
+    background: #fff;
+    padding: 30px 0;
+    border-top: 1px solid #e9ecef;
+}
+
+.search_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search_form select {
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.search_form input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 200px;
+    font-size: 14px;
+}
+
+.search_form button {
+    padding: 8px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.search_form button:hover {
+    background: #0056b3;
+}
+
+/* Board Pagination */
+.board_pagination {
+    background: #fff;
+    padding: 30px 0;
+    border-top: 1px solid #e9ecef;
+}
+
+.board_pagination .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.board_pagination a {
+    padding: 8px 16px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.board_pagination a:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.board_pagination ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.board_pagination li a {
+    padding: 8px 12px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.board_pagination li a.active {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .board_header h2 {
+        font-size: 2rem;
+    }
+    
+    .board_table {
+        font-size: 14px;
+    }
+    
+    .board_table th,
+    .board_table td {
+        padding: 10px 8px;
+    }
+    
+    .search_form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search_form input[type="text"] {
+        width: 100%;
+    }
+    
+    .board_pagination .inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .board_table {
+        font-size: 12px;
+    }
+    
+    .board_table th,
+    .board_table td {
+        padding: 8px 5px;
+    }
+    
+    .board_header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .board_header p {
+        font-size: 1rem;
+    }
+}
