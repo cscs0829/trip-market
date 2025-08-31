@@ -82,34 +82,17 @@
     <!-- Main Content -->
     <main id="contents">
         <!-- Hero Section -->
-        <section class="main_visual_banner">
-            <div class="banner_container">
-                <div class="banner_item active">
-                    <img src="images/banners/main-banner-1.jpeg" alt="스위스 알프스의 아름다운 풍경">
-                    <div class="banner_content">
-                        <h1 class="banner_title animate-fade-in-up">스위스 알프스의<br>마법 같은 순간</h1>
-                        <p class="banner_subtitle animate-slide-in-left">눈부신 설산과 푸른 호수, 아름다운 마을을 경험해보세요</p>
-                        <a href="#swiss" class="banner_button animate-slide-in-right">여행 시작하기</a>
-                    </div>
-                </div>
-                <div class="banner_item">
-                    <img src="images/banners/main-banner-2.jpeg" alt="몰디브의 투명한 바다">
-                    <div class="banner_content">
-                        <h1 class="banner_title">몰디브의<br>파라다이스</h1>
-                        <p class="banner_subtitle">투명한 바다와 하얀 모래사장에서 꿈꾸던 휴식을</p>
-                        <a href="#maldives" class="banner_button">지금 예약하기</a>
-                    </div>
-                </div>
-                <div class="banner_item">
-                    <img src="images/banners/main-banner-3.jpeg" alt="일본의 전통과 현대가 공존하는 도시">
-                    <div class="banner_content">
-                        <h1 class="banner_title">일본의<br>전통과 현대</h1>
-                        <p class="banner_subtitle">고즈넉한 사찰과 첨단 기술의 도시를 동시에 경험하세요</p>
-                        <a href="#japan" class="banner_button">일본 여행하기</a>
-                    </div>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Wanderlust</h1>
+                <p class="hero-subtitle">해외여행의 모든 것</p>
+                <div class="hero-buttons">
+                    <a href="#destinations" class="btn-primary">여행지 둘러보기</a>
+                    <a href="#packages" class="btn-secondary">패키지 여행</a>
                 </div>
             </div>
         </section>
+
 
         <!-- Category Section -->
         <section class="main_title_section" id="destinations">
@@ -310,32 +293,42 @@
         <div class="bottom-nav__tabs">
             <div class="bottom-nav__tab">
                 <a href="/" class="bottom-nav__btn active">
-                    <div class="bottom-nav__icon">홈</div>
+                    <div class="bottom-nav__icon">
+                        <img src="images/icons/home-icon.svg" alt="홈" class="nav-icon">
+                    </div>
                     <span class="bottom-nav__text">홈</span>
                 </a>
             </div>
             <div class="bottom-nav__tab">
                 <a href="#destinations" class="bottom-nav__btn">
-                    <div class="bottom-nav__icon">여행지</div>
+                    <div class="bottom-nav__icon">
+                        <img src="images/icons/destination-icon.svg" alt="여행지" class="nav-icon">
+                    </div>
                     <span class="bottom-nav__text">여행지</span>
                 </a>
             </div>
             <div class="bottom-nav__tab">
                 <a href="#packages" class="bottom-nav__btn">
-                    <div class="bottom-nav__icon">패키지</div>
+                    <div class="bottom-nav__icon">
+                        <img src="images/icons/package-icon.svg" alt="패키지" class="nav-icon">
+                    </div>
                     <span class="bottom-nav__text">패키지</span>
                 </a>
             </div>
             <div class="bottom-nav__tab">
                 <a href="javascript:;" onclick="alert('장바구니 기능은 준비 중입니다.')" class="bottom-nav__btn">
-                    <div class="bottom-nav__icon">장바구니</div>
+                    <div class="bottom-nav__icon">
+                        <img src="images/icons/cart-icon.svg" alt="장바구니" class="nav-icon">
+                    </div>
                     <span class="bottom-nav__text">장바구니</span>
                     <span class="bottom-nav__badge">1</span>
                 </a>
             </div>
             <div class="bottom-nav__tab">
                 <a href="javascript:;" class="bottom-nav__btn show-auth-modal">
-                    <div class="bottom-nav__icon">마이페이지</div>
+                    <div class="bottom-nav__icon">
+                        <img src="images/icons/profile-icon.svg" alt="마이페이지" class="nav-icon">
+                    </div>
                     <span class="bottom-nav__text">마이페이지</span>
                 </a>
             </div>

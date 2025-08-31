@@ -1,6 +1,35 @@
 /* Responsive Design for Trippage Clone */
 
 /* Mobile First Approach */
+
+/* ===================================
+   BOTTOM NAVIGATION RESPONSIVE
+   =================================== */
+
+/* 데스크톱에서는 bottom-nav 숨김 */
+.bottom-nav {
+  display: none;
+}
+
+/* 모바일에서만 bottom-nav 표시 */
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: block;
+  }
+  
+  /* 모바일에서 메인 콘텐츠에 하단 여백 추가 */
+  main {
+    padding-bottom: 80px;
+  }
+  
+  /* 모바일에서 헤더 고정 */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+  }
+}
+
 @media (max-width: 1200px) {
     .inner {
         padding: 0 15px;
