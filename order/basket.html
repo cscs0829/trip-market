@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 - Wanderlust</title>
+    <meta name="description" content="장바구니에 담긴 상품들을 확인하고 주문하세요">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/basket.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <!-- Top Navigation -->
+        <nav class="top_nav">
+            <div class="top_nav_box">
+                <div class="top_nav_left">
+                    <span>전 세계 여행 정보를 한눈에</span>
+                </div>
+                <div class="toparea_state">
+                    <a href="javascript:;" class="show-auth-modal">로그인/회원가입</a>
+                    <a href="javascript:;" onclick="alert('주문조회 기능은 준비 중입니다.')">주문조회</a>
+                    <a href="javascript:;" onclick="alert('최근본상품 기능은 준비 중입니다.')">최근본상품</a>
+                    
+                    <!-- Customer Service Dropdown -->
+                    <div class="toparea_state_board">
+                        <a href="#none">
+                            고객센터
+                            <i aria-hidden="true" class="icon icoArrowBottom">▼</i>
+                        </a>
+                        <ul class="xans-element- xans-layout xans-layout-boardinfo">
+                            <li class="xans-record-"><a href="../board/notice.html">공지사항</a></li>
+                            <li class="xans-record-"><a href="../board/review.html">상품 사용후기</a></li>
+                            <li class="xans-record-"><a href="../board/qna.html">상품 Q&A</a></li>
+                            <li class="xans-record-"><a href="../board/free.html">자유게시판</a></li>
+                            <li class="xans-record-"><a href="../board/gallery.html">갤러리</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Navigation -->
+        <nav class="main_nav">
+            <div class="main_nav_box">
+                <div class="logo">
+                    <a href="../">Wanderlust</a>
+                </div>
+                
+                <ul class="main_menu">
+                    <li><a href="../#destinations">여행지</a></li>
+                    <li><a href="../#packages">패키지</a></li>
+                    <li><a href="../#activities">액티비티</a></li>
+                    <li><a href="../#hotels">호텔</a></li>
+                    <li><a href="../#flights">항공</a></li>
+                    <li><a href="../#community">커뮤니티</a></li>
+                </ul>
+
+                <div class="top_mypage">
+                    <!-- Profile menu will be dynamically created here -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="contents">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">장바구니</h1>
+                <nav class="breadcrumb">
+                    <a href="../">홈</a> > 장바구니
+                </nav>
+            </div>
+        </section>
+
+        <!-- Basket Content -->
+        <section class="basket-section">
+            <div class="container">
+                <div id="basketItems">
+                    <!-- 장바구니 아이템들이 여기에 동적으로 렌더링됩니다 -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Navigation -->
+    <nav class="bottom-nav">
+        <div class="bottom-nav__tabs">
+            <div class="bottom-nav__tab">
+                <a href="../" class="bottom-nav__btn">
+                    <div class="bottom-nav__icon">
+                        <img src="../images/icons/home-icon.svg" alt="홈" class="nav-icon">
+                    </div>
+                    <span class="bottom-nav__text">홈</span>
+                </a>
+            </div>
+            <div class="bottom-nav__tab">
+                <a href="../#destinations" class="bottom-nav__btn">
+                    <div class="bottom-nav__icon">
+                        <img src="../images/icons/destination-icon.svg" alt="여행지" class="nav-icon">
+                    </div>
+                    <span class="bottom-nav__text">여행지</span>
+                </a>
+            </div>
+            <div class="bottom-nav__tab">
+                <a href="../#packages" class="bottom-nav__btn">
+                    <div class="bottom-nav__icon">
+                        <img src="../images/icons/package-icon.svg" alt="패키지" class="nav-icon">
+                    </div>
+                    <span class="bottom-nav__text">패키지</span>
+                </a>
+            </div>
+            <div class="bottom-nav__tab">
+                <a href="basket.html" class="bottom-nav__btn active">
+                    <div class="bottom-nav__icon">
+                        <img src="../images/icons/cart-icon.svg" alt="장바구니" class="nav-icon">
+                    </div>
+                    <span class="bottom-nav__text">장바구니</span>
+                    <span class="bottom-nav__badge">0</span>
+                </a>
+            </div>
+            <div class="bottom-nav__tab">
+                <a href="javascript:;" class="bottom-nav__btn show-auth-modal">
+                    <div class="bottom-nav__icon">
+                        <img src="../images/icons/profile-icon.svg" alt="마이페이지" class="nav-icon">
+                    </div>
+                    <span class="bottom-nav__text">마이페이지</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- JavaScript Files -->
+    <script src="../js/basket.js"></script>
+    <script src="../js/main-profile.js"></script>
+</body>
+</html>

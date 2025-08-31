@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자유게시판 - 트립페이지</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/board.css" rel="stylesheet">
+</head>
+<body class="theme05">
+    <div id="wrap">
+        <!-- Top Banner -->
+        <div class="main_top_banner">
+            <div class="top_banner_box_inner">
+                <div class="top_banner_text">
+                    <a href="#">첫 쇼핑을 지원하는 3,000원 할인 회원가입 쿠폰</a>
+                </div>
+                <div class="top_banner_close">
+                    <input id="top_banner_box_cloase" name="chkbox" type="checkbox" value="1">
+                    <label for="top_banner_box_cloase">오늘 하루 보지 않기</label>
+                    <i class="icon icoClose">닫기</i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Header -->
+        <header class="layout1" id="header">
+            <div class="inner">
+                <div class="toparea display_pc_only">
+                    <div class="toparea_shoppinginfo">
+                        <div data-ez-group="shopping-info" data-ez-role="list"></div>
+                    </div>
+                    <div class="toparea_state" data-ez-group="top-util-menu" data-ez-role="list">
+                        <a href="javascript:;" class="xans-element- xans-layout xans-layout-statelogoff" id="loginBtn">로그인/회원가입</a>
+                        <a href="/myshop/order/list.html">주문조회</a>
+                        <a href="../recent-view-product.html">최근본상품</a>
+                        <div class="toparea_state_board">
+                            <a href="#none">고객센터 <i class="icon icoArrowBottom"></i></a>
+                            <ul class="xans-element- xans-layout xans-layout-boardinfo">
+                                <li><a href="notice.html">공지사항</a></li>
+                                <li><a href="review.html">상품 사용후기</a></li>
+                                <li><a href="qna.html">상품 Q&A</a></li>
+                                <li><a href="free.html">자유게시판</a></li>
+                                <li><a href="gallery.html">갤러리</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="top_nav_box" id="top_nav_box">
+                    <div class="top_logo">
+                        <a href="../">주식회사 트립페이지</a>
+                    </div>
+                    
+                    <div class="top_nav">
+                        <a class="eNavFold" href="javascript:;"><i class="icon icoNav"></i></a>
+                    </div>
+                    <div class="top_category">
+                        <ul>
+                            <li><a href="../category-accommodation.html">숙박</a></li>
+                            <li><a href="../category-transportation.html">교통</a></li>
+                            <li><a href="../category-tour.html">투어</a></li>
+                            <li><a href="../category-activity.html">액티비티</a></li>
+                            <li><a href="../category-performance.html">공연/티켓</a></li>
+                            <li><a href="../category-etc.html">기타</a></li>
+                        </ul>
+                    </div>
+                    <div class="top_mypage">
+                        <a class="eSearch" href="javascript:;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon" role="img">
+                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"></path>
+                                <path stroke="#000" stroke-linejoin="round" stroke-width="1.5" d="M22 22l-5-5"></path>
+                            </svg>
+                        </a>
+                        <a href="/myshop/index.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon" role="img">
+                                <circle cx="11.5" cy="6.5" r="3.75" stroke="#000" stroke-width="1.5"></circle>
+                                <path stroke="#000" stroke-width="1.5" d="M1.78 21.25c.382-4.758 4.364-8.5 9.22-8.5h1c4.856 0 8.838 3.742 9.22 8.5H1.78z"></path>
+                            </svg>
+                        </a>
+                        <a href="../order/basket.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon" role="img">
+                                <path fill="#000" d="M23.073 22.253l-1.946-14.31c-.04-.38-.368-.667-.758-.667h-3.656v-1.74c0-2.543-2.115-4.613-4.713-4.613-2.599 0-4.713 2.07-4.713 4.613v1.74H3.63c-.39 0-.717.288-.758.667L.927 22.253c-.022.21.047.42.192.577.144.157.35.247.566.247h20.63c.216 0 .421-.09.566-.247.145-.157.214-.366.192-.576zM8.81 5.537c0-1.72 1.431-3.122 3.19-3.122 1.758 0 3.19 1.401 3.19 3.122v1.74H8.81v-1.74zm-6.28 16.05l1.786-12.82h2.97v1.644c0 .412.342.746.762.746.421 0 .762-.334.762-.746V8.767h6.38v1.643c0 .412.34.746.761.746.42 0 .762-.334.762-.746V8.767h2.97l1.786 12.819H2.53z"></path>
+                            </svg>
+                            <span class="count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <div id="container">
+            <div id="contents">
+                <!-- Breadcrumb -->
+                <div class="board_breadcrumb">
+                    <div class="inner">
+                        <ul>
+                            <li><a href="../">홈</a></li>
+                            <li>/</li>
+                            <li><a href="#none">게시판</a></li>
+                            <li>/</li>
+                            <li><strong>자유게시판</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Board Header -->
+                <div class="board_header">
+                    <div class="inner">
+                        <h2>자유게시판</h2>
+                        <p>자유게시판입니다.</p>
+                    </div>
+                </div>
+                
+                <!-- Board List -->
+                <div class="board_list">
+                    <div class="inner">
+                        <table class="board_table">
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>작성자</th>
+                                    <th>작성일</th>
+                                    <th>조회</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="5" class="no_data">검색결과가 없습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Board Search -->
+                <div class="board_search">
+                    <div class="inner">
+                        <form class="search_form">
+                            <select name="period">
+                                <option value="7">일주일</option>
+                                <option value="30">한달</option>
+                                <option value="90">세달</option>
+                                <option value="all">전체</option>
+                            </select>
+                            <select name="search_type">
+                                <option value="title">제목</option>
+                                <option value="content">내용</option>
+                                <option value="author">글쓴이</option>
+                                <option value="id">아이디</option>
+                                <option value="nickname">별명</option>
+                            </select>
+                            <input type="text" name="search_keyword" placeholder="검색어를 입력하세요">
+                            <button type="submit">찾기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="layout1" id="footer">
+            <div class="inner">
+                <div class="bt_logo">
+                    <a href="../">주식회사 트립페이지</a>
+                </div>
+                <div class="bt_util">
+                    <ul>
+                        <li><a href="/shopinfo/company.html">회사소개</a></li>
+                        <li><a href="/member/mall_agreement.html">이용약관</a></li>
+                        <li><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="/shopinfo/guide.html">이용안내</a></li>
+                    </ul>
+                </div>
+                <div class="bt_wrap">
+                    <div class="bt_info">
+                        <div class="title">쇼핑몰 기본정보</div>
+                        <div class="bt_info_list">
+                            <div><span>상호명</span> <span>주식회사 트립페이지</span></div>
+                            <div><span>대표자명</span> <span>최현욱, 노형백</span></div>
+                            <div><span>사업장 주소</span> <span>61912 광주 서구 상무버들로 35 2층 201호(유촌동)</span></div>
+                            <div><span>대표 전화</span> <span>010-9767-3366</span></div>
+                            <div><span>사업자 등록번호</span> <span>813-88-03018</span></div>
+                            <div><span>개인정보보호책임자</span> <span>최현욱</span></div>
+                        </div>
+                    </div>
+                    <div class="bt_cscenter">
+                        <div class="title">고객센터 정보</div>
+                        <div>
+                            <div><strong>상담/주문 전화</strong> <span>010-9767-3366</span></div>
+                            <div><strong>상담/주문 이메일</strong> <span>trippage@naver.com</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bt_wrap2">
+                    <div class="bt_copyright">
+                        Copyright © 주식회사 트립페이지. All Rights Reserved. Hosting by Cafe24 Corp.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

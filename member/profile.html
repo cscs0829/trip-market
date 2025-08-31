@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지 - 트립페이지</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="../css/profile.css" rel="stylesheet">
+</head>
+<body class="theme05">
+    <div id="wrap">
+        <!-- Top Banner -->
+        <div class="main_top_banner">
+            <div class="top_banner_wrap">
+                <div class="top_banner_content">
+                    <p>🎉 여행의 모든 것, 트립페이지에서 만나보세요!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header id="header">
+            <div class="header_top">
+                <div class="header_top_wrap">
+                    <div class="header_top_left">
+                        <div class="toparea_state" data-ez-group="top-util-menu" data-ez-role="list">
+                            <a data-ez-item="join" href="agreement.html" class="xans-element- xans-layout xans-layout-statelogoff">회원가입</a>
+                            <a data-ez-item="login" href="login.html" class="xans-element- xans-layout xans-layout-statelogoff">로그인</a>
+                            <a data-ez-item="order" href="../order/list.html">주문조회</a>
+                            <a data-ez-item="recent" href="../recent-view-product.html">최근본상품</a>
+                            <div class="toparea_state_board on">
+                                <a data-ez-item="board" href="#none">고객센터 <i aria-hidden="true" class="icon icoArrowBottom"></i></a>
+                                <ul class="xans-element- xans-layout xans-layout-boardinfo">
+                                    <li><a href="../board/notice.html">공지사항</a></li>
+                                    <li><a href="../board/review.html">상품 사용후기</a></li>
+                                    <li><a href="../board/qna.html">상품 Q&A</a></li>
+                                    <li><a href="../board/free.html">자유게시판</a></li>
+                                    <li><a href="../board/gallery.html">갤러리</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_top_right">
+                        <div class="user_profile_menu">
+                            <a href="#" class="profile_icon" id="profileIcon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon" role="img">
+                                    <circle cx="11.5" cy="6.5" r="3.75" stroke="#000" stroke-width="1.5"></circle>
+                                    <path stroke="#000" stroke-width="1.5" d="M1.78 21.25c.382-4.758 4.364-8.5 9.22-8.5h1c4.856 0 8.838 3.742 9.22 8.5H1.78z"></path>
+                                </svg>
+                            </a>
+                            <div class="profile_dropdown" id="profileDropdown">
+                                <div class="profile_info">
+                                    <div class="profile_avatar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24">
+                                            <circle cx="12" cy="8" r="5" stroke="#6c757d" stroke-width="2"></circle>
+                                            <path stroke="#6c757d" stroke-width="2" d="M20 21c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="profile_details">
+                                        <h4>홍길동</h4>
+                                        <p>hong@example.com</p>
+                                    </div>
+                                </div>
+                                <ul class="profile_menu">
+                                    <li><a href="profile.html"><i class="icon">👤</i> 마이페이지</a></li>
+                                    <li><a href="edit.html"><i class="icon">⚙️</i> 프로필 관리</a></li>
+                                    <li><a href="../wishlist.html"><i class="icon">❤️</i> 찜한 상품</a></li>
+                                    <li><a href="../recent-view-product.html"><i class="icon">👁️</i> 최근 본 상품</a></li>
+                                    <li><a href="../order/list.html"><i class="icon">📦</i> 주문내역</a></li>
+                                    <li><a href="#" id="logoutBtn"><i class="icon">🚪</i> 로그아웃</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header_main">
+                <div class="header_main_wrap">
+                    <div class="header_logo">
+                        <a href="../index.html">
+                            <img src="../images/logo.png" alt="트립페이지" class="logo_img">
+                        </a>
+                    </div>
+                    <nav class="header_nav">
+                        <ul class="nav_menu">
+                            <li><a href="../category-accommodation.html">숙박</a></li>
+                            <li><a href="../category-transportation.html">교통</a></li>
+                            <li><a href="../category-tour.html">투어</a></li>
+                            <li><a href="../category-activity.html">액티비티</a></li>
+                            <li><a href="../category-performance.html">공연</a></li>
+                            <li><a href="../category-etc.html">기타</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header_search">
+                        <div class="search_box">
+                            <input type="text" placeholder="여행지를 검색해보세요">
+                            <button type="button" class="search_btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                    <circle cx="11" cy="11" r="8" stroke="#6c757d" stroke-width="2"></circle>
+                                    <path stroke="#6c757d" stroke-width="2" d="m21 21-4.35-4.35"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <div class="breadcrumb_wrap">
+                    <ul>
+                        <li><a href="../index.html">홈</a></li>
+                        <li><a href="profile.html">마이페이지</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <section class="profile_section">
+                <div class="container">
+                    <div class="profile_header">
+                        <h1>마이페이지</h1>
+                        <p>여행의 모든 기록을 한눈에 확인하세요</p>
+                    </div>
+
+                    <div class="profile_content">
+                        <div class="profile_sidebar">
+                            <div class="profile_menu_sidebar">
+                                <h3>마이메뉴</h3>
+                                <ul>
+                                    <li class="active"><a href="profile.html">마이페이지</a></li>
+                                    <li><a href="edit.html">프로필 관리</a></li>
+                                    <li><a href="../wishlist.html">찜한 상품</a></li>
+                                    <li><a href="../recent-view-product.html">최근 본 상품</a></li>
+                                    <li><a href="../order/list.html">주문내역</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="profile_main">
+                            <div class="profile_overview">
+                                <div class="profile_card">
+                                    <div class="profile_avatar_large">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="none" viewBox="0 0 24 24">
+                                            <circle cx="12" cy="8" r="5" stroke="#6c757d" stroke-width="2"></circle>
+                                            <path stroke="#6c757d" stroke-width="2" d="M20 21c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="profile_info_large">
+                                        <h2>홍길동</h2>
+                                        <p>hong@example.com</p>
+                                        <p class="member_since">회원가입일: 2024년 1월 15일</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile_stats">
+                                <div class="stat_card">
+                                    <div class="stat_icon">📦</div>
+                                    <div class="stat_content">
+                                        <h3>총 주문</h3>
+                                        <p class="stat_number">12</p>
+                                    </div>
+                                </div>
+                                <div class="stat_card">
+                                    <div class="stat_icon">❤️</div>
+                                    <div class="stat_content">
+                                        <h3>찜한 상품</h3>
+                                        <p class="stat_number">8</p>
+                                    </div>
+                                </div>
+                                <div class="stat_card">
+                                    <div class="stat_icon">👁️</div>
+                                    <div class="stat_content">
+                                        <h3>최근 본 상품</h3>
+                                        <p class="stat_number">15</p>
+                                    </div>
+                                </div>
+                                <div class="stat_card">
+                                    <div class="stat_icon">⭐</div>
+                                    <div class="stat_content">
+                                        <h3>포인트</h3>
+                                        <p class="stat_number">2,450</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="recent_orders">
+                                <h3>최근 주문내역</h3>
+                                <div class="order_list">
+                                    <div class="order_item">
+                                        <div class="order_info">
+                                            <h4>제주도 2박 3일 패키지</h4>
+                                            <p>2024년 1월 20일</p>
+                                            <span class="order_status completed">완료</span>
+                                        </div>
+                                        <div class="order_price">
+                                            <p>₩450,000</p>
+                                        </div>
+                                    </div>
+                                    <div class="order_item">
+                                        <div class="order_info">
+                                            <h4>부산 해운대 호텔</h4>
+                                            <p>2024년 1월 15일</p>
+                                            <span class="order_status completed">완료</span>
+                                        </div>
+                                        <div class="order_price">
+                                            <p>₩180,000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="footer_wrap">
+                <div class="footer_content">
+                    <div class="footer_info">
+                        <h3>트립페이지</h3>
+                        <p>여행의 모든 것을 한 곳에서</p>
+                    </div>
+                    <div class="footer_links">
+                        <h4>고객지원</h4>
+                        <ul>
+                            <li><a href="../board/notice.html">공지사항</a></li>
+                            <li><a href="../board/qna.html">자주묻는질문</a></li>
+                            <li><a href="../board/review.html">후기</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_contact">
+                        <h4>연락처</h4>
+                        <p>📧 info@trippage.com</p>
+                        <p>📞 1588-1234</p>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <p>&copy; 2024 트립페이지. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
