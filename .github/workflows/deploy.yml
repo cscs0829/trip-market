@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build project
+      run: |
+        # 정적 파일들을 dist 폴더로 복사
+        mkdir -p dist
+        cp -r *.html dist/
+        cp -r css/ dist/
+        cp -r js/ dist/
+        cp -r images/ dist/
+        cp -r fonts/ dist/
+        cp -r board/ dist/
+        cp -r member/ dist/
+        cp -r order/ dist/
+        cp -r product/ dist/
+        cp -r category-*.html dist/
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        cname: cscs0829.github.io
