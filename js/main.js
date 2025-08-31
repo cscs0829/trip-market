@@ -59,24 +59,26 @@ function initNavigation() {
     let lastScrollTop = 0;
     const header = document.getElementById('header');
     
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > 100) {
-            header.classList.add('sticky');
-        } else {
-            header.classList.remove('sticky');
-        }
-        
-        // Hide header on scroll down, show on scroll up
-        if (scrollTop > lastScrollTop && scrollTop > 200) {
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            header.style.transform = 'translateY(0)';
-        }
-        
-        lastScrollTop = scrollTop;
-    });
+    if (header) {
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+            
+            // Hide header on scroll down, show on scroll up
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+    }
     
     // Customer Service Dropdown
     initCustomerServiceDropdown();
@@ -296,36 +298,73 @@ function initSearch() {
 function initWishlistCart() {
     // Wishlist functionality
     document.addEventListener('click', function(e) {
-        if (e.target.classList.contains('wish')) {
+        if (e.target.textContent === '♥' || e.target.classList.contains('wish')) {
             e.preventDefault();
-            const productItem = e.target.closest('.prdList__item');
-            const productName = productItem.querySelector('.description .name a').textContent;
+            
+            // 상품 정보 찾기
+            let productItem = e.target.closest('.product_card') || e.target.closest('.prdList__item');
+            let productName = '';
+            
+            if (productItem) {
+                const nameElement = productItem.querySelector('.product_name') || 
+                                  productItem.querySelector('.description .name a') ||
+                                  productItem.querySelector('h3');
+                if (nameElement) {
+                    productName = nameElement.textContent.trim();
+                }
+            }
+            
+            if (!productName) {
+                productName = '상품';
+            }
             
             // Toggle wishlist state
-            e.target.classList.toggle('active');
-            if (e.target.classList.contains('active')) {
-                e.target.textContent = 'WISHED';
-                showNotification(`${productName}이 위시리스트에 추가되었습니다.`);
-            } else {
-                e.target.textContent = 'WISH';
-                showNotification(`${productName}이 위시리스트에서 제거되었습니다.`);
+            if (e.target && e.target.classList) {
+                e.target.classList.toggle('active');
+                if (e.target.classList.contains('active')) {
+                    e.target.style.color = '#e74c3c';
+                    showNotification(`${productName}이 위시리스트에 추가되었습니다.`);
+                } else {
+                    e.target.style.color = '';
+                    showNotification(`${productName}이 위시리스트에서 제거되었습니다.`);
+                }
             }
         }
         
         // Cart functionality
-        if (e.target.classList.contains('cart')) {
+        if (e.target.textContent === '장바구니' || e.target.classList.contains('cart')) {
             e.preventDefault();
-            const productItem = e.target.closest('.prdList__item');
-            const productName = productItem.querySelector('.description .name a').textContent;
+            
+            // 상품 정보 찾기
+            let productItem = e.target.closest('.product_card') || e.target.closest('.prdList__item');
+            let productName = '';
+            
+            if (productItem) {
+                const nameElement = productItem.querySelector('.product_name') || 
+                                  productItem.querySelector('.description .name a') ||
+                                  productItem.querySelector('h3');
+                if (nameElement) {
+                    productName = nameElement.textContent.trim();
+                }
+            }
+            
+            if (!productName) {
+                productName = '상품';
+            }
             
             // Add to cart animation
-            e.target.textContent = 'ADDED';
-            e.target.classList.add('added');
-            
-            setTimeout(() => {
-                e.target.textContent = 'ADD';
-                e.target.classList.remove('added');
-            }, 2000);
+            if (e.target && e.target.classList) {
+                const originalText = e.target.textContent;
+                e.target.textContent = '추가됨';
+                e.target.classList.add('added');
+                
+                setTimeout(() => {
+                    if (e.target) {
+                        e.target.textContent = originalText;
+                        e.target.classList.remove('added');
+                    }
+                }, 2000);
+            }
             
             showNotification(`${productName}이 장바구니에 추가되었습니다.`);
         }

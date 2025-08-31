@@ -3,697 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하나투어 트립페이지</title>
+    <title>Wanderlust - 해외여행의 모든 것</title>
+    <meta name="description" content="전 세계의 아름다운 여행지를 발견하고 꿈꾸던 여행을 현실로 만들어보세요">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Spoqa Han Sans -->
-    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css">
-    
-    <!-- Additional Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Red+Hat+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     
     <!-- CSS Files -->
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-    <link href="css/trippage-modal.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+    <link href="css/auth-modal.css" rel="stylesheet">
 </head>
-<body class="theme05">
-    <div id="wrap">
-        <!-- Top Banner -->
-        <div class="main_top_banner">
-            <div class="top_banner_box_inner">
-                <div class="top_banner_text">
-                    <a href="#">첫 쇼핑을 지원하는 3,000원 할인 회원가입 쿠폰</a>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <!-- Top Navigation -->
+        <nav class="top_nav">
+            <div class="top_nav_box">
+                <div class="top_nav_left">
+                    <span>전 세계 여행 정보를 한눈에</span>
                 </div>
-                <div class="top_banner_close">
-                    <input id="top_banner_box_cloase" name="chkbox" type="checkbox" value="1">
-                    <label for="top_banner_box_cloase">오늘 하루 보지 않기</label>
-                    <i class="icon icoClose">닫기</i>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Header -->
-        <header class="layout1" id="header">
-            <div class="inner">
-                <div class="toparea display_pc_only">
-                    <div class="toparea_shoppinginfo">
-                        <div data-ez-group="shopping-info" data-ez-role="list"></div>
-                    </div>
-                    <div class="toparea_state" data-ez-group="top-util-menu" data-ez-role="list">
-                        <a href="javascript:;" class="xans-element- xans-layout xans-layout-statelogoff" id="loginBtn">로그인/회원가입</a>
-                        <a href="/myshop/order/list.html">주문조회</a>
-                        <a href="recent-view-product.html">최근본상품</a>
-                        <div class="toparea_state_board">
-                            <a href="#none">고객센터 <i class="icon icoArrowBottom"></i></a>
-                            <ul class="xans-element- xans-layout xans-layout-boardinfo">
-                                <li><a href="board/notice.html">공지사항</a></li>
-                                <li><a href="board/review.html">상품 사용후기</a></li>
-                                <li><a href="board/qna.html">상품 Q&A</a></li>
-                                <li><a href="board/free.html">자유게시판</a></li>
-                                <li><a href="board/gallery.html">갤러리</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="top_nav_box" id="top_nav_box">
-                    <div class="top_logo">
-                        <a href="/">주식회사 트립페이지</a>
-                    </div>
+                <div class="toparea_state">
+                    <a href="javascript:;" class="show-auth-modal">로그인/회원가입</a>
+                    <a href="javascript:;" onclick="alert('주문조회 기능은 준비 중입니다.')">주문조회</a>
+                    <a href="javascript:;" onclick="alert('최근본상품 기능은 준비 중입니다.')">최근본상품</a>
                     
-                    <!-- 모바일 햄버거 메뉴 버튼 -->
-                    <button type="button" class="btnNav eNavFold mobile-only" id="hamburgerBtn">
-                        <span class="hamburger-icon"></span>
-                        <span class="hamburger-icon"></span>
-                        <span class="hamburger-icon"></span>
-                        <span class="hamburger-text">네비게이션</span>
-                    </button>
-                    
-                    <div class="top_nav">
-                        <a class="eNavFold" href="javascript:;"><i class="icon icoNav"></i></a>
-                    </div>
-                    <div class="top_category">
-                        <ul>
-                            <li><a href="category-accommodation.html">숙박</a></li>
-                            <li><a href="category-transportation.html">교통</a></li>
-                            <li><a href="category-tour.html">투어</a></li>
-                            <li><a href="category-activity.html">액티비티</a></li>
-                            <li><a href="category-performance.html">공연/티켓</a></li>
-                            <li><a href="category-etc.html">기타</a></li>
+                    <!-- Customer Service Dropdown -->
+                    <div class="toparea_state_board">
+                        <a href="#none">
+                            고객센터
+                            <i aria-hidden="true" class="icon icoArrowBottom">▼</i>
+                        </a>
+                        <ul class="xans-element- xans-layout xans-layout-boardinfo">
+                            <li class="xans-record-"><a href="board/notice.html">공지사항</a></li>
+                            <li class="xans-record-"><a href="board/review.html">상품 사용후기</a></li>
+                            <li class="xans-record-"><a href="board/qna.html">상품 Q&A</a></li>
+                            <li class="xans-record-"><a href="board/free.html">자유게시판</a></li>
+                            <li class="xans-record-"><a href="board/gallery.html">갤러리</a></li>
                         </ul>
                     </div>
-                    <div class="top_mypage">
-                        <a class="eSearch" href="javascript:;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon" role="img">
-                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"></path>
-                                <path stroke="#000" stroke-linejoin="round" stroke-width="1.5" d="M22 22l-5-5"></path>
-                            </svg>
-                        </a>
-                        <div class="user_profile_menu">
-                            <a href="#" class="profile_icon" id="profileIcon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon" role="img">
-                                    <circle cx="11.5" cy="6.5" r="3.75" stroke="#000" stroke-width="1.5"></circle>
-                                    <path stroke="#000" stroke-width="1.5" d="M1.78 21.25c.382-4.758 4.364-8.5 9.22-8.5h1c4.856 0 8.838 3.742 9.22 8.5H1.78z"></path>
-                                </svg>
-                            </a>
-                            <div class="profile_dropdown" id="profileDropdown">
-                                <div class="profile_info">
-                                    <div class="profile_avatar">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24">
-                                            <circle cx="12" cy="8" r="5" stroke="#6c757d" stroke-width="2"></circle>
-                                            <path stroke="#6c757d" stroke-width="2" d="M20 21c0-4.418-3.582-8-8-8s-8 3.582-8 8"></path>
-                                        </svg>
-                                    </div>
-                                    <div class="profile_details">
-                                        <h4>사용자</h4>
-                                        <p>로그인이 필요합니다</p>
-                                    </div>
-                                </div>
-                                <ul class="profile_menu">
-                                    <li><a href="member/login.html"><i class="icon">🔑</i> 로그인</a></li>
-                                    <li><a href="member/agreement.html"><i class="icon">📝</i> 회원가입</a></li>
-                                    <li><a href="order/list.html"><i class="icon">📦</i> 주문조회</a></li>
-                                    <li><a href="recent-view-product.html"><i class="icon">👁️</i> 최근 본 상품</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="order/basket.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="icon" role="img">
-                                <path fill="#000" d="M23.073 22.253l-1.946-14.31c-.04-.38-.368-.667-.758-.667h-3.656v-1.74c0-2.543-2.115-4.613-4.713-4.613-2.599 0-4.713 2.07-4.713 4.613v1.74H3.63c-.39 0-.717.288-.758.667L.927 22.253c-.022.21.047.42.192.577.144.157.35.247.566.247h20.63c.216 0 .421-.09.566-.247.145-.157.214-.366.192-.576zM8.81 5.537c0-1.72 1.431-3.122 3.19-3.122 1.758 0 3.19 1.401 3.19 3.122v1.74H8.81v-1.74zm-6.28 16.05l1.786-12.82h2.97v1.644c0 .412.342.746.762.746.421 0 .762-.334.762-.746V8.767h6.38v1.643c0 .412.34.746.761.746.42 0 .762-.334.762-.746V8.767h2.97l1.786 12.819H2.53z"></path>
-                            </svg>
-                            <span class="count">0</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
-        
-        <!-- Main Content -->
-        <div id="container">
-            <div id="contents">
-                <!-- Main Visual Banner -->
-                <div class="main_visual_banner">
-                    <div class="banner_slider">
-                        <div class="banner_item active">
-                            <img src="images/banners/main-banner-1.jpeg" alt="메인 배너 1">
-                        </div>
-                        <div class="banner_item">
-                            <img src="images/banners/main-banner-2.jpeg" alt="메인 배너 2">
-                        </div>
-                        <div class="banner_item">
-                            <img src="images/banners/main-banner-3.jpeg" alt="메인 배너 3">
-                        </div>
-                    </div>
-                    <div class="banner_controls">
-                        <button class="prev">이전</button>
-                        <button class="next">다음</button>
-                    </div>
-                </div>
-                
-                <!-- Main Title Section -->
-                <section class="main_title_section">
-                    <div class="main_title">
-                        <h1>떠나고 싶은 여행</h1>
-                        <p>인생에 한 번쯤은 꼭 가봐야 할 여행지</p>
-                    </div>
-                </section>
-                
-                <!-- 3 Column Banner -->
-                <section class="main_3dan_banner">
-                    <ul class="ez-column-3">
-                        <li>
-                            <a href="#">
-                                <img src="images/products/amigo-swiss-red-train.jpg" alt="익사이팅 알파인 패러글라이딩">
-                                <div class="main_banner_txt">
-                                    <div class="main_banner_txt01">익사이팅 알파인 패러글라이딩</div>
-                                    <div class="main_banner_more">자세히 살펴보기</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/products/ultimate-snow-mountain-trekking.jpg" alt="얼티밋 설산 트레킹">
-                                <div class="main_banner_txt">
-                                    <div class="main_banner_txt01">얼티밋 설산 트레킹</div>
-                                    <div class="main_banner_more">자세히 살펴보기</div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/products/amor-maldives-hammock.jpg" alt="아마존 그린 벌룬 투어">
-                                <div class="main_banner_txt">
-                                    <div class="main_banner_txt01">아마존 그린 벌룬 투어</div>
-                                    <div class="main_banner_more">자세히 살펴보기</div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-                
-                <!-- Long Banner -->
-                <div class="main_long_banner">
-                    <img src="images/banners/long-banner.jpg" alt="롱 배너">
-                </div>
-                
-                <!-- Product Category Section -->
-                <section class="main_product_category">
-                    <div class="main_product_inner">
-                        <div class="main_title">
-                            <h2>여행/체험</h2>
-                            <p>다양한 여행/체험 상품을 만나보세요</p>
-                        </div>
-                        <ul class="main_product_tab">
-                            <li><button class="button active" data-id="tabContent1">국내여행</button></li>
-                            <li><button class="button" data-id="tabContent2">해외여행</button></li>
-                            <li><button class="button" data-id="tabContent3">액티비티</button></li>
-                            <li><button class="button" data-id="tabContent4">테마파크</button></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content_list">
-                        <div class="tabcontent active" id="tabContent1">
-                            <ul class="prdList grid4">
-                                <li>
-                                    <div class="prdList__item">
-                                        <div class="thumbnail">
-                                            <a href="#">
-                                                <img src="images/products/amigo-swiss-red-train.jpg" alt="아미고 스위스 레드 트레인 여행">
-                                            </a>
-                                            <div class="icon__box">
-                                                <span class="wish">
-                                                    <img src="images/icons/wish-before.png" alt="관심상품 등록 전" class="wish-icon">
-                                                </span>
-                                                <span class="cart">
-                                                    <img src="images/icons/cart-icon.gif" alt="장바구니 담기" class="cart-icon">
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="description">
-                                            <div class="name">
-                                                <a href="#">아미고 스위스 레드 트레인 여행</a>
-                                            </div>
-                                            <ul class="spec">
-                                                <li><strong>2,500,000원</strong></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- More products... -->
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- Special Price Section -->
-                <section class="main_product_slide">
-                    <div class="main_title">
-                        <h2>놓치면 후회할 특가</h2>
-                        <p>지금 바로 예약하고 잊지 못할 추억을 만드세요</p>
-                    </div>
-                    <div class="product_slider">
-                        <!-- Product slider content -->
-                    </div>
-                </section>
-                
-                <!-- Product Recommendation -->
-                <section class="main_product_list">
-                    <div class="main_title">
-                        <h2>여행 상품 추천</h2>
-                        <p>엄선된 상품으로 최고의 여행을 선사합니다</p>
-                    </div>
-                    <div class="product_grid">
-                        <!-- Product grid content -->
-                    </div>
-                </section>
-                
-                <!-- Text Banner -->
-                <section class="main_text">
-                    <div class="main_text_title">여행을 떠나요</div>
-                    <div class="main_text_txt">
-                        <p>설렘 가득한 여행, 지금 바로 떠나보세요! 다양한 여행 상품과 특별한 혜택이 당신을 기다립니다.</p>
-                    </div>
-                    <div class="main_text_link">
-                        <a href="#">자세히 보기</a>
-                    </div>
-                </section>
-                
-                <!-- Map Section -->
-                <section class="main_map">
-                    <div class="main_map_banner">
-                        <div class="main_map_banner_txt_box">
-                            <div class="main_map_banner_txt">
-                                <div class="main_map_banner_txt01">OFFLINE SHOP</div>
-                                <div class="main_map_banner_txt02">
-                                    <p>매장에서는 고객 여러분을 따뜻하게 맞이하고</p>
-                                    <p>기프트 구매를 위한 맞춤형 컨설팅을 제공해드립니다.</p>
-                                    <p><strong>운영시간 : 평일 09:00-18:00</strong></p>
-                                    <p><strong>서울특별시 동작구 보라매로0길 00</strong></p>
-                                </div>
-                                <div class="main_long_banner_link">
-                                    <a href="https://www.google.com/maps" target="_blank">VIEW MORE</a>
-                                </div>
-                            </div>
-                        </div>
-                        <img src="images/banners/offline-shop-map.jpg" alt="오프라인 매장 지도">
-                    </div>
-                </section>
-            </div>
-        </div>
-        
-        <!-- 로그인/회원가입 모달 -->
-        <div id="authModal" class="auth-modal">
-            <div class="auth-modal-content">
-                <div class="auth-modal-header">
-                    <h2>로그인/회원가입</h2>
-                    <button class="auth-close-btn" id="authCloseBtn">&times;</button>
-                </div>
-                
-                <div class="auth-modal-body">
-                    <!-- 이메일 입력 단계 -->
-                    <div id="emailStep" class="auth-step active">
-                        <div class="auth-step-title">
-                            <h3>이메일로 시작하기</h3>
-                            <p>이메일을 입력하면 로그인 또는 회원가입을 도와드립니다</p>
-                        </div>
-                        
-                        <div class="demo-info" style="background: #e7f3ff; border: 1px solid #b3d9ff; border-radius: 8px; padding: 15px; margin-bottom: 20px; text-align: center;">
-                            <h4 style="margin: 0 0 10px 0; color: #0056b3;">🎯 데모 계정</h4>
-                            <p style="margin: 0; font-size: 0.9rem; color: #0056b3;">이메일: demo@trippage.com<br>비밀번호: 123456</p>
-                        </div>
-                        
-                        <form id="emailForm" class="auth-form">
-                            <div class="form-group">
-                                <label for="userEmail">이메일</label>
-                                <input type="email" id="userEmail" name="email" placeholder="이메일을 입력하세요" required>
-                                <div class="error-message" id="emailError"></div>
-                            </div>
-                            
-                            <button type="submit" class="auth-btn primary">다음</button>
-                        </form>
-                    </div>
-                    
-                    <!-- 로그인 단계 -->
-                    <div id="loginStep" class="auth-step">
-                        <div class="auth-step-title">
-                            <h3>로그인</h3>
-                            <p>비밀번호를 입력해주세요</p>
-                        </div>
-                        
-                        <form id="loginForm" class="auth-form">
-                            <div class="form-group">
-                                <label for="loginPassword">비밀번호</label>
-                                <input type="password" id="loginPassword" name="password" placeholder="비밀번호를 입력하세요" required>
-                                <div class="error-message" id="loginError"></div>
-                            </div>
-                            
-                            <div class="auth-options">
-                                <label>
-                                    <input type="checkbox" name="rememberMe"> 로그인 상태 유지
-                                </label>
-                                <a href="#" class="forgot-password">비밀번호 찾기</a>
-                            </div>
-                            
-                            <button type="submit" class="auth-btn primary">로그인</button>
-                        </form>
-                    </div>
-                    
-                    <!-- 회원가입 단계 -->
-                    <div id="registerStep" class="auth-step">
-                        <div class="auth-step-title">
-                            <h3>회원가입</h3>
-                            <p>추가 정보를 입력해주세요</p>
-                        </div>
-                        
-                        <form id="registerForm" class="auth-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="userName">이름</label>
-                                    <input type="text" id="userName" name="name" placeholder="이름을 입력하세요" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="userPhone">전화번호</label>
-                                    <input type="tel" id="userPhone" name="phone" placeholder="010-0000-0000" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="userAge">나이</label>
-                                    <input type="number" id="userAge" name="age" placeholder="나이를 입력하세요" min="1" max="120" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="userGender">성별</label>
-                                    <select id="userGender" name="gender" required>
-                                        <option value="">선택하세요</option>
-                                        <option value="male">남성</option>
-                                        <option value="female">여성</option>
-                                        <option value="other">기타</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="userPassword">비밀번호</label>
-                                <input type="password" id="userPassword" name="password" placeholder="비밀번호를 입력하세요" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="userPasswordConfirm">비밀번호 확인</label>
-                                <input type="password" id="userPasswordConfirm" name="passwordConfirm" placeholder="비밀번호를 다시 입력하세요" required>
-                                <div class="error-message" id="passwordError"></div>
-                            </div>
-                            
-                            <button type="button" class="auth-btn primary" id="nextToAgreement">다음</button>
-                        </form>
-                    </div>
-                    
-                    <!-- 약관 동의 단계 -->
-                    <div id="agreementStep" class="auth-step">
-                        <div class="auth-step-title">
-                            <h3>약관 동의</h3>
-                            <p>필수 약관에 동의해주세요</p>
-                        </div>
-                        
-                        <form id="agreementForm" class="auth-form">
-                            <!-- 전체 동의 -->
-                            <div class="agree-all-section">
-                                <div class="agree-all-checkbox">
-                                    <label>
-                                        <input type="checkbox" id="agreeAll" name="agreeAll">
-                                        <span class="checkbox-custom"></span>
-                                        <strong>모든 약관을 확인하고 전체 동의합니다.</strong>
-                                    </label>
-                                    <p class="agree-desc">(전체 동의는 필수 및 선택 정보에 대한 동의가 포함되어 있습니다.)</p>
-                                </div>
-                            </div>
-                            
-                            <!-- 필수 약관 -->
-                            <div class="agree-section required">
-                                <h4>필수 약관</h4>
-                                
-                                <div class="agree-item">
-                                    <div class="agree-header">
-                                        <label>
-                                            <input type="checkbox" id="agreeService" name="agreeService" class="required-checkbox" required>
-                                            <span class="checkbox-custom"></span>
-                                            <span class="agree-title">이용약관 동의 (필수)</span>
-                                        </label>
-                                        <button type="button" class="btn-toggle" data-target="serviceContent">내용보기</button>
-                                    </div>
-                                    <div class="agree-content" id="serviceContent">
-                                        <div class="terms-content">
-                                            <p><strong>제1조(목적)</strong></p>
-                                            <p>이 약관은 주식회사 트립페이지(전자상거래 사업자)가 운영하는 트립페이지(이하 "몰"이라 한다)에서 제공하는 인터넷 관련 서비스(이하 "서비스"라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리․의무 및 책임사항을 규정함을 목적으로 합니다.</p>
-                                            <p>※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다.」</p>
-                                            <p><strong>제2조(정의)</strong></p>
-                                            <p>① "몰"이란 주식회사 트립페이지가 재화 또는 용역(이하 "재화 등"이라 함)을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 등을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 사이버몰을 운영하는 사업자의 의미로도 사용합니다.</p>
-                                            <p>② "이용자"란 "몰"에 접속하여 이 약관에 따라 "몰"이 제공하는 서비스를 받는 회원 및 비회원을 말합니다.</p>
-                                            <p>③ '회원'이라 함은 "몰"에 회원등록을 한 자로서, 계속적으로 "몰"이 제공하는 서비스를 이용할 수 있는 자를 말합니다.</p>
-                                            <p>④ '비회원'이라 함은 회원에 가입하지 않고 "몰"이 제공하는 서비스를 이용하는 자를 말합니다.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="agree-item">
-                                    <div class="agree-header">
-                                        <label>
-                                            <input type="checkbox" id="agreePrivacy" name="agreePrivacy" class="required-checkbox" required>
-                                            <span class="checkbox-custom"></span>
-                                            <span class="agree-title">개인정보 수집 및 이용 동의 (필수)</span>
-                                        </label>
-                                        <button type="button" class="btn-toggle" data-target="privacyContent">내용보기</button>
-                                    </div>
-                                    <div class="agree-content" id="privacyContent">
-                                        <div class="terms-content">
-                                            <p><strong>개인정보 수집 및 이용 동의</strong></p>
-                                            <p>트립페이지는 회원가입, 상담, 서비스 신청 등을 위해 아래와 같은 개인정보를 수집하고 있습니다.</p>
-                                            <p><strong>수집항목:</strong> 이름, 이메일, 전화번호, 성별, 나이</p>
-                                            <p><strong>수집목적:</strong> 회원 관리, 서비스 제공, 고객 상담</p>
-                                            <p><strong>보유기간:</strong> 회원 탈퇴 시까지</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- 선택 약관 -->
-                            <div class="agree-section optional">
-                                <h4>선택 약관</h4>
-                                
-                                <div class="agree-item">
-                                    <div class="agree-header">
-                                        <label>
-                                            <input type="checkbox" id="agreeMarketing" name="agreeMarketing" class="optional-checkbox">
-                                            <span class="checkbox-custom"></span>
-                                            <span class="agree-title">쇼핑정보 수신 동의 (선택)</span>
-                                        </label>
-                                        <button type="button" class="btn-toggle" data-target="marketingContent">내용보기</button>
-                                    </div>
-                                    <div class="agree-content" id="marketingContent">
-                                        <div class="terms-content">
-                                            <p>할인쿠폰 및 혜택, 이벤트, 신상품 소식 등 쇼핑몰에서 제공하는 유익한 쇼핑정보를 SMS나 이메일로 받아보실 수 있습니다.</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="agree-sub-items">
-                                        <label>
-                                            <input type="checkbox" id="agreeSMS" name="agreeSMS" class="optional-checkbox">
-                                            <span class="checkbox-custom"></span>
-                                            <span>SMS 수신 동의 (선택)</span>
-                                        </label>
-                                        <label>
-                                            <input type="checkbox" id="agreeEmail" name="agreeEmail" class="optional-checkbox">
-                                            <span class="checkbox-custom"></span>
-                                            <span>이메일 수신 동의 (선택)</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="form-actions">
-                                <button type="button" class="auth-btn secondary" id="backToRegister">뒤로</button>
-                                <button type="submit" class="auth-btn primary" id="completeRegistration">회원가입 완료</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                
-                <div class="auth-modal-footer">
-                    <p>다른 방법으로 로그인</p>
-                    <div class="social-login-buttons">
-                        <button class="social-btn kakao">카카오</button>
-                        <button class="social-btn naver">네이버</button>
-                        <button class="social-btn google">구글</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 모바일 사이드 메뉴 -->
-        <aside class="mobile-side-menu" id="mobileSideMenu">
-            <div class="side-menu-header">
-                <h3>메뉴</h3>
-                <button type="button" class="side-menu-close" id="sideMenuClose">
-                    <span class="close-icon"></span>
-                </button>
-            </div>
-            
-            <div class="side-menu-content">
-                <!-- 회원 관련 -->
-                <div class="side-menu-section">
-                    <div class="side-menu-links">
-                        <a href="javascript:;" class="side-menu-link" id="sideMenuLoginBtn">회원가입</a>
-                        <a href="javascript:;" class="side-menu-link" id="sideMenuLoginBtn2">로그인</a>
-                        <a href="/myshop/order/list.html" class="side-menu-link">주문조회</a>
-                        <a href="recent-view-product.html" class="side-menu-link">최근본상품</a>
-                    </div>
-                </div>
-                
-                <!-- 카테고리 메뉴 -->
-                <div class="side-menu-section">
-                    <h4>카테고리</h4>
-                    <div class="side-menu-links">
-                        <a href="category-accommodation.html" class="side-menu-link">숙박</a>
-                        <a href="category-transportation.html" class="side-menu-link">교통</a>
-                        <a href="category-tour.html" class="side-menu-link">투어</a>
-                        <a href="category-activity.html" class="side-menu-link">액티비티</a>
-                        <a href="category-performance.html" class="side-menu-link">공연/티켓</a>
-                        <a href="category-etc.html" class="side-menu-link">기타</a>
-                    </div>
-                </div>
-                
-                <!-- 고객센터 -->
-                <div class="side-menu-section">
-                    <h4>고객센터</h4>
-                    <div class="side-menu-links">
-                        <a href="/board/공지사항/1/" class="side-menu-link">공지사항</a>
-                        <a href="/board/상품-사용후기/4/" class="side-menu-link">상품 사용후기</a>
-                        <a href="/board/상품-qa/6/" class="side-menu-link">상품 Q&A</a>
-                        <a href="/board/자유게시판/5/" class="side-menu-link">자유게시판</a>
-                        <a href="/board/갤러리/8/" class="side-menu-link">갤러리</a>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        
-        <!-- 모바일 하단 네비게이션 -->
-        <nav class="bottom-nav" id="bottomNav">
-            <div class="bottom-nav__tabBar">
-                <div class="bottom-nav__tab">
-                    <button type="button" class="bottom-nav__btn" id="bottomNavBtn">
-                        <div class="bottom-nav__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12h18M3 6h18M3 18h18"/>
-                            </svg>
-                        </div>
-                        <span class="bottom-nav__text">네비게이션</span>
-                    </button>
-                </div>
-                
-                <div class="bottom-nav__tab">
-                    <button type="button" class="bottom-nav__btn" id="bottomSearchBtn">
-                        <div class="bottom-nav__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 19c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"/>
-                                <path stroke="#000" stroke-linejoin="round" stroke-width="1.5" d="M22 22l-5-5"/>
-                            </svg>
-                        </div>
-                        <span class="bottom-nav__text">검색</span>
-                    </button>
-                </div>
-                
-                <div class="bottom-nav__tab">
-                    <a href="/" class="bottom-nav__btn">
-                        <div class="bottom-nav__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                <polyline stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="9,22 9,12 15,12 15,22"/>
-                            </svg>
-                        </div>
-                        <span class="bottom-nav__text">홈</span>
-                    </a>
-                </div>
-                
-                <div class="bottom-nav__tab">
-                    <a href="order/basket.html" class="bottom-nav__btn">
-                        <div class="bottom-nav__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"/>
-                            </svg>
-                        </div>
-                        <span class="bottom-nav__text">Cart</span>
-                        <span class="bottom-nav__badge">1</span>
-                    </a>
-                </div>
-                
-                <div class="bottom-nav__tab">
-                    <a href="/myshop/index.html" class="bottom-nav__btn">
-                        <div class="bottom-nav__icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <circle cx="11.5" cy="6.5" r="3.75" stroke="#000" stroke-width="1.5"/>
-                                <path stroke="#000" stroke-width="1.5" d="M1.78 21.25c.382-4.758 4.364-8.5 9.22-8.5h1c4.856 0 8.838 3.742 9.22 8.5H1.78z"/>
-                            </svg>
-                        </div>
-                        <span class="bottom-nav__text">마이쇼핑</span>
-                    </a>
                 </div>
             </div>
         </nav>
-        
 
-        
-        <!-- Footer -->
-        <footer class="layout1" id="footer">
-            <div class="inner">
-                <div class="bt_logo">
-                    <a href="/">주식회사 트립페이지</a>
+        <!-- Main Navigation -->
+        <nav class="main_nav">
+            <div class="main_nav_box">
+                <div class="logo">
+                    <a href="/">Wanderlust</a>
                 </div>
-                <div class="bt_util">
-                    <ul>
-                        <li><a href="/shopinfo/company.html">회사소개</a></li>
-                        <li><a href="/member/mall_agreement.html">이용약관</a></li>
-                        <li><a href="/member/privacy.html"><strong>개인정보처리방침</strong></a></li>
-                        <li><a href="/shopinfo/guide.html">이용안내</a></li>
-                    </ul>
+                
+                <ul class="main_menu">
+                    <li><a href="#destinations">여행지</a></li>
+                    <li><a href="#packages">패키지</a></li>
+                    <li><a href="#activities">액티비티</a></li>
+                    <li><a href="#hotels">호텔</a></li>
+                    <li><a href="#flights">항공</a></li>
+                    <li><a href="#community">커뮤니티</a></li>
+                </ul>
+
+                <div class="top_mypage">
+                    <!-- Profile menu will be dynamically created here -->
                 </div>
-                <div class="bt_wrap">
-                    <div class="bt_info">
-                        <div class="title">쇼핑몰 기본정보</div>
-                        <div class="bt_info_list">
-                            <div><span>상호명</span> <span>주식회사 트립페이지</span></div>
-                            <div><span>대표자명</span> <span>최현욱, 노형백</span></div>
-                            <div><span>사업장 주소</span> <span>61912 광주 서구 상무버들로 35 2층 201호(유촌동)</span></div>
-                            <div><span>대표 전화</span> <span>010-9767-3366</span></div>
-                            <div><span>사업자 등록번호</span> <span>813-88-03018</span></div>
-                            <div><span>개인정보보호책임자</span> <span>최현욱</span></div>
-                        </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="hamburger-btn" aria-label="메뉴 열기">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="contents">
+        <!-- Hero Section -->
+        <section class="main_visual_banner">
+            <div class="banner_container">
+                <div class="banner_item active">
+                    <img src="images/banners/main-banner-1.jpeg" alt="스위스 알프스의 아름다운 풍경">
+                    <div class="banner_content">
+                        <h1 class="banner_title animate-fade-in-up">스위스 알프스의<br>마법 같은 순간</h1>
+                        <p class="banner_subtitle animate-slide-in-left">눈부신 설산과 푸른 호수, 아름다운 마을을 경험해보세요</p>
+                        <a href="#swiss" class="banner_button animate-slide-in-right">여행 시작하기</a>
                     </div>
-                    <div class="bt_cscenter">
-                        <div class="title">고객센터 정보</div>
-                        <div>
-                            <div><strong>상담/주문 전화</strong> <span>010-9767-3366</span></div>
-                            <div><strong>상담/주문 이메일</strong> <span>trippage@naver.com</span></div>
-                        </div>
+                </div>
+                <div class="banner_item">
+                    <img src="images/banners/main-banner-2.jpeg" alt="몰디브의 투명한 바다">
+                    <div class="banner_content">
+                        <h1 class="banner_title">몰디브의<br>파라다이스</h1>
+                        <p class="banner_subtitle">투명한 바다와 하얀 모래사장에서 꿈꾸던 휴식을</p>
+                        <a href="#maldives" class="banner_button">지금 예약하기</a>
                     </div>
                 </div>
-                <div class="bt_wrap2">
-                    <div class="bt_copyright">
-                        Copyright © 주식회사 트립페이지. All Rights Reserved. Hosting by Cafe24 Corp.
+                <div class="banner_item">
+                    <img src="images/banners/main-banner-3.jpeg" alt="일본의 전통과 현대가 공존하는 도시">
+                    <div class="banner_content">
+                        <h1 class="banner_title">일본의<br>전통과 현대</h1>
+                        <p class="banner_subtitle">고즈넉한 사찰과 첨단 기술의 도시를 동시에 경험하세요</p>
+                        <a href="#japan" class="banner_button">일본 여행하기</a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <!-- Category Section -->
+        <section class="main_title_section" id="destinations">
+            <div class="section_content">
+                <h2 class="section_title">인기 여행지</h2>
+                <p class="section_subtitle">전 세계 여행자들이 가장 사랑하는 여행지를 만나보세요</p>
+                
+                <div class="category_grid">
+                    <div class="category_card hover-lift">
+                        <img src="images/products/amigo-swiss-red-train.jpg" alt="스위스 기차 여행">
+                        <div class="category_content">
+                            <h3 class="category_name">스위스 기차 여행</h3>
+                            <p class="category_description">아름다운 알프스 산맥을 가로지르는 기차 여행으로 스위스의 정취를 느껴보세요</p>
+                            <a href="#swiss-train" class="category_button">자세히 보기</a>
+                        </div>
+                    </div>
+                    
+                    <div class="category_card hover-lift">
+                        <img src="images/products/ultimate-snow-mountain-trekking.jpg" alt="설산 트레킹">
+                        <div class="category_content">
+                            <h3 class="category_name">설산 트레킹</h3>
+                            <p class="category_description">눈 덮인 산봉우리를 오르며 자연의 웅장함을 직접 체험해보세요</p>
+                            <a href="#mountain-trek" class="category_button">자세히 보기</a>
+                        </div>
+                    </div>
+                    
+                    <div class="category_card hover-lift">
+                        <img src="images/products/amor-maldives-hammock.jpg" alt="몰디브 휴양">
+                        <div class="category_content">
+                            <h3 class="category_name">몰디브 휴양</h3>
+                            <p class="category_description">투명한 바다와 하얀 모래사장에서 완벽한 휴식을 즐겨보세요</p>
+                            <a href="#maldives-resort" class="category_button">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section class="main_3dan_banner" id="packages">
+            <div class="product_tabs">
+                <div class="tab_buttons">
+                    <button class="tab_button active" data-tab="europe">유럽</button>
+                    <button class="tab_button" data-tab="asia">아시아</button>
+                    <button class="tab_button" data-tab="america">아메리카</button>
+                    <button class="tab_button" data-tab="oceania">오세아니아</button>
+                </div>
+                
+                <div class="product_grid" id="europe-tab">
+                    <div class="product_card hover-lift">
+                        <div class="product_image">
+                            <img src="images/products/amigo-swiss-red-train.jpg" alt="스위스 기차 여행">
+                            <div class="product_overlay">
+                                <button class="overlay_button" title="위시리스트">♥</button>
+                                <button class="overlay_button" title="장바구니">장바구니</button>
+                            </div>
+                        </div>
+                        <div class="product_content">
+                            <h3 class="product_name">스위스 기차 여행 패키지</h3>
+                            <div class="product_price">₩2,890,000</div>
+                            <div class="product_rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating_count">(127명)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product_card hover-lift">
+                        <div class="product_image">
+                            <img src="images/products/ultimate-snow-mountain-trekking.jpg" alt="알프스 트레킹">
+                            <div class="product_overlay">
+                                <button class="overlay_button" title="위시리스트">♥</button>
+                                <button class="overlay_button" title="장바구니">장바구니</button>
+                            </div>
+                        </div>
+                        <div class="product_content">
+                            <h3 class="product_name">알프스 트레킹 모험</h3>
+                            <div class="product_price">₩1,650,000</div>
+                            <div class="product_rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating_count">(89명)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product_card hover-lift">
+                        <div class="product_image">
+                            <img src="images/products/modern-swiss-snow-train.jpg" alt="스위스 설산 기차">
+                            <div class="product_overlay">
+                                <button class="overlay_button" title="위시리스트">♥</button>
+                                <button class="overlay_button" title="장바구니">장바구니</button>
+                            </div>
+                        </div>
+                        <div class="product_content">
+                            <h3 class="product_name">스위스 설산 기차 여행</h3>
+                            <div class="product_price">₩3,120,000</div>
+                            <div class="product_rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating_count">(156명)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Banner -->
+        <section class="main_long_banner">
+            <div class="long_banner_content">
+                <h2 class="long_banner_title">특별한 여행 경험을<br>지금 시작하세요</h2>
+                <p class="long_banner_text">전문 여행 컨설턴트와 함께 맞춤형 여행을 계획하고, 평생 잊을 수 없는 추억을 만들어보세요</p>
+                <a href="#consultation" class="long_banner_button">무료 상담 받기</a>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="main_map_banner" id="locations">
+            <div class="map_content">
+                <div class="map_info_box">
+                    <h2 class="map_title">OFFLINE SHOP</h2>
+                    <p class="map_description">매장에서는 고객 여러분을 따뜻하게 맞이하고<br>기프트 구매를 위한 맞춤형 컨설팅을 제공해드립니다.</p>
+                    <div class="map_operation_info">
+                        <p><strong>운영시간 :</strong> 평일 09:00-18:00</p>
+                        <p><strong>주소 :</strong> 광주 서구 상무버들로54번길 35 (유촌동) 2층 201호</p>
+                    </div>
+                    <button class="map_view_more_btn">VIEW MORE</button>
+                </div>
+                <div class="map_image">
+                    <img src="images/banners/offline-shop-map.jpg" alt="전 세계 여행지 지도">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer_content">
+            <div class="footer_section">
+                <h3>Wanderlust</h3>
+                <p>전 세계의 아름다운 여행지를 발견하고 꿈꾸던 여행을 현실로 만들어주는 여행 전문 플랫폼입니다.</p>
+            </div>
+            
+            <div class="footer_section">
+                <h3>여행 정보</h3>
+                <ul>
+                    <li><a href="#destinations">인기 여행지</a></li>
+                    <li><a href="#packages">패키지 여행</a></li>
+                    <li><a href="#activities">액티비티</a></li>
+                    <li><a href="#hotels">호텔 예약</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer_section">
+                <h3>고객 지원</h3>
+                <ul>
+                    <li><a href="board/notice.html">공지사항</a></li>
+                    <li><a href="board/qna.html">자주 묻는 질문</a></li>
+                    <li><a href="#contact">문의하기</a></li>
+                    <li><a href="#support">고객센터</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer_section">
+                <h3>회사 정보</h3>
+                <ul>
+                    <li><a href="#about">회사 소개</a></li>
+                    <li><a href="#careers">채용 정보</a></li>
+                    <li><a href="#partners">파트너십</a></li>
+                    <li><a href="#press">언론 보도</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer_bottom">
+            <p>&copy; 2025 Wanderlust. All rights reserved. | 해외여행의 모든 것</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Side Menu -->
+    <div class="mobile-side-menu">
+        <div class="mobile-side-menu-header">
+            <h3>메뉴</h3>
+            <button class="mobile-side-menu-close">&times;</button>
+        </div>
+        <ul class="mobile-side-menu-list">
+            <li><a href="#destinations">여행지</a></li>
+            <li><a href="#packages">패키지</a></li>
+            <li><a href="#activities">액티비티</a></li>
+            <li><a href="#hotels">호텔</a></li>
+            <li><a href="#flights">항공</a></li>
+            <li><a href="#community">커뮤니티</a></li>
+            <li><a href="javascript:;" class="show-auth-modal">로그인/회원가입</a></li>
+        </ul>
     </div>
-    
-    <!-- CSS Files -->
-    <link href="css/profile.css" rel="stylesheet">
-    
+
+    <!-- Mobile Navigation -->
+    <nav class="bottom-nav">
+        <div class="bottom-nav__tabs">
+            <div class="bottom-nav__tab">
+                <a href="/" class="bottom-nav__btn active">
+                    <div class="bottom-nav__icon">홈</div>
+                    <span class="bottom-nav__text">홈</span>
+                </a>
+            </div>
+            <div class="bottom-nav__tab">
+                <a href="#destinations" class="bottom-nav__btn">
+                    <div class="bottom-nav__icon">여행지</div>
+                    <span class="bottom-nav__text">여행지</span>
+                </a>
+            </div>
+            <div class="bottom-nav__tab">
+                <a href="#packages" class="bottom-nav__btn">
+                    <div class="bottom-nav__icon">패키지</div>
+                    <span class="bottom-nav__text">패키지</span>
+                </a>
+            </div>
+            <div class="bottom-nav__tab">
+                <a href="javascript:;" onclick="alert('장바구니 기능은 준비 중입니다.')" class="bottom-nav__btn">
+                    <div class="bottom-nav__icon">장바구니</div>
+                    <span class="bottom-nav__text">장바구니</span>
+                    <span class="bottom-nav__badge">1</span>
+                </a>
+            </div>
+            <div class="bottom-nav__tab">
+                <a href="javascript:;" class="bottom-nav__btn show-auth-modal">
+                    <div class="bottom-nav__icon">마이페이지</div>
+                    <span class="bottom-nav__text">마이페이지</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="authCloseBtn">&times;</span>
+            
+            <!-- Login/Register Toggle -->
+            <div class="auth-toggle">
+                <button class="toggle-btn active" data-mode="login">로그인</button>
+                <button class="toggle-btn" data-mode="register">회원가입</button>
+            </div>
+            
+            <!-- Login Form -->
+            <div id="loginForm" class="auth-form active">
+                <h2>로그인</h2>
+                <p>여행을 시작하려면 로그인하세요</p>
+                <form>
+                    <input type="email" placeholder="이메일 주소" required>
+                    <input type="password" placeholder="비밀번호" required>
+                    <button type="submit" class="btn-primary">로그인</button>
+                </form>
+                <div class="auth-links">
+                    <a href="#" class="forgot-password">비밀번호 찾기</a>
+                </div>
+            </div>
+            
+            <!-- Register Form -->
+            <div id="registerForm" class="auth-form">
+                <h2>회원가입</h2>
+                <p>새로운 여행을 시작하려면 회원가입하세요</p>
+                <form>
+                    <input type="text" placeholder="이름" required>
+                    <input type="email" placeholder="이메일 주소" required>
+                    <input type="password" placeholder="비밀번호 (6자 이상)" required>
+                    <input type="password" placeholder="비밀번호 확인" required>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agreeAll" required>
+                        <label for="agreeAll">모든 약관에 동의합니다</label>
+                    </div>
+                    <button type="submit" class="btn-primary">회원가입</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- JavaScript Files -->
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>

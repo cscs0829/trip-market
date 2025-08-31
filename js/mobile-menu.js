@@ -14,28 +14,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 사이드 메뉴 열기
     function openSideMenu() {
-        mobileSideMenu.classList.add('active');
-        document.body.style.overflow = 'hidden'; // 스크롤 방지
+        if (mobileSideMenu) {
+            mobileSideMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // 스크롤 방지
+        }
     }
     
     // 사이드 메뉴 닫기
     function closeSideMenu() {
-        mobileSideMenu.classList.remove('active');
-        document.body.style.overflow = ''; // 스크롤 복원
+        if (mobileSideMenu) {
+            mobileSideMenu.classList.remove('active');
+            document.body.style.overflow = ''; // 스크롤 복원
+        }
     }
     
     // 검색 모달 열기
     function openSearchModal() {
-        searchModal.classList.add('active');
-        searchInput.focus(); // 검색창에 포커스
-        document.body.style.overflow = 'hidden'; // 스크롤 방지
+        if (searchModal && searchInput) {
+            searchModal.classList.add('active');
+            searchInput.focus(); // 검색창에 포커스
+            document.body.style.overflow = 'hidden'; // 스크롤 방지
+        }
     }
     
     // 검색 모달 닫기
     function closeSearchModal() {
-        searchModal.classList.remove('active');
-        document.body.style.overflow = ''; // 스크롤 복원
-        searchInput.value = ''; // 검색창 초기화
+        if (searchModal && searchInput) {
+            searchModal.classList.remove('active');
+            document.body.style.overflow = ''; // 스크롤 복원
+            searchInput.value = ''; // 검색창 초기화
+        }
     }
     
     // 이벤트 리스너 등록
@@ -43,6 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // 햄버거 메뉴 버튼 클릭
     if (hamburgerBtn) {
         hamburgerBtn.addEventListener('click', openSideMenu);
+    }
+    
+    // 모바일 사이드 메뉴 닫기 버튼
+    const mobileSideMenuClose = document.querySelector('.mobile-side-menu-close');
+    if (mobileSideMenuClose) {
+        mobileSideMenuClose.addEventListener('click', closeSideMenu);
     }
     
     // 사이드 메뉴 닫기 버튼 클릭
@@ -82,7 +96,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 사이드 메뉴 외부 클릭 시 닫기
     document.addEventListener('click', function(e) {
         if (mobileSideMenu && mobileSideMenu.classList.contains('active')) {
-            if (!mobileSideMenu.contains(e.target) && !hamburgerBtn.contains(e.target) && !bottomNavBtn.contains(e.target)) {
+            if (!mobileSideMenu.contains(e.target) && 
+                (!hamburgerBtn || !hamburgerBtn.contains(e.target)) && 
+                (!bottomNavBtn || !bottomNavBtn.contains(e.target))) {
                 closeSideMenu();
             }
         }
@@ -91,7 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 검색 모달 외부 클릭 시 닫기
     document.addEventListener('click', function(e) {
         if (searchModal && searchModal.classList.contains('active')) {
-            if (!searchModal.contains(e.target) && !bottomSearchBtn.contains(e.target)) {
+            if (!searchModal.contains(e.target) && 
+                (!bottomSearchBtn || !bottomSearchBtn.contains(e.target))) {
                 closeSearchModal();
             }
         }

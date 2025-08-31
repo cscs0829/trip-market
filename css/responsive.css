@@ -65,6 +65,113 @@
         gap: 15px;
     }
     
+    /* 햄버거 메뉴 버튼 */
+    .hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1000;
+    }
+    
+    .hamburger-btn span {
+        width: 100%;
+        height: 3px;
+        background: var(--dark-gray);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger-btn.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        background: var(--primary);
+    }
+    
+    .hamburger-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-btn.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+        background: var(--primary);
+    }
+    
+    /* 모바일 사이드 메뉴 */
+    .mobile-side-menu {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: var(--white);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+    }
+    
+    .mobile-side-menu.active {
+        right: 0;
+    }
+    
+    .mobile-side-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--light-gray);
+        background: var(--primary);
+        color: var(--white);
+    }
+    
+    .mobile-side-menu-header h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    .mobile-side-menu-close {
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mobile-side-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .mobile-side-menu-list li {
+        border-bottom: 1px solid var(--light-gray);
+    }
+    
+    .mobile-side-menu-list li a {
+        display: block;
+        padding: 1rem 1.5rem;
+        color: var(--dark-gray);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .mobile-side-menu-list li a:hover {
+        background: var(--light-gray);
+        color: var(--primary);
+    }
+    
     /* Main Content Adjustments */
     .main_visual_banner {
         height: 300px;

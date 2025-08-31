@@ -1,0 +1,23 @@
+{
+  "name": "trippage-clone",
+  "version": "1.0.0",
+  "description": "현대적이고 반응형 디자인의 여행 상품 쇼핑몰 웹사이트입니다. 사용자 인증, 상품 관리, 고객 서비스 게시판 등 다양한 기능을 제공합니다.",
+  "main": "clone-system.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cscs0829/market.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cscs0829/market/issues"
+  },
+  "homepage": "https://github.com/cscs0829/market#readme",
+  "dependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
