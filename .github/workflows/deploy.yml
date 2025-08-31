@@ -8,21 +8,13 @@ on:
 
 # GitHub Pages 배포를 위한 권한 설정
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
-
-# 배포 작업을 위한 환경 설정
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
     - name: Checkout
@@ -91,16 +83,9 @@ jobs:
         echo "배포 폴더 내용:"
         ls -la dist/
         
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
+    - name: Deploy to gh-pages branch
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        enablement: true
-        
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: './dist'
-        
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
+        force_orphan: true
