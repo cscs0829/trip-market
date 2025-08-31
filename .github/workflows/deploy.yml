@@ -24,18 +24,58 @@ jobs:
       
     - name: Build project
       run: |
-        # 정적 파일들을 dist 폴더로 복사
+        # dist 폴더 생성
         mkdir -p dist
-        cp -r *.html dist/
-        cp -r css/ dist/
-        cp -r js/ dist/
-        cp -r images/ dist/
-        cp -r fonts/ dist/
-        cp -r board/ dist/
-        cp -r member/ dist/
-        cp -r order/ dist/
-        cp -r product/ dist/
-        cp -r category-*.html dist/
+        
+        # HTML 파일들 복사
+        cp *.html dist/ 2>/dev/null || true
+        
+        # CSS 폴더 복사 (존재하는 경우)
+        if [ -d "css" ]; then
+          cp -r css/ dist/
+        fi
+        
+        # JS 폴더 복사 (존재하는 경우)
+        if [ -d "js" ]; then
+          cp -r js/ dist/
+        fi
+        
+        # images 폴더 복사 (존재하는 경우)
+        if [ -d "images" ]; then
+          cp -r images/ dist/
+        fi
+        
+        # fonts 폴더 복사 (존재하고 내용이 있는 경우)
+        if [ -d "fonts" ] && [ "$(ls -A fonts)" ]; then
+          cp -r fonts/ dist/
+        fi
+        
+        # board 폴더 복사 (존재하는 경우)
+        if [ -d "board" ]; then
+          cp -r board/ dist/
+        fi
+        
+        # member 폴더 복사 (존재하는 경우)
+        if [ -d "member" ]; then
+          cp -r member/ dist/
+        fi
+        
+        # order 폴더 복사 (존재하는 경우)
+        if [ -d "order" ]; then
+          cp -r order/ dist/
+        fi
+        
+        # product 폴더 복사 (존재하는 경우)
+        if [ -d "product" ]; then
+          cp -r product/ dist/
+        fi
+        
+        # category HTML 파일들 복사
+        cp category-*.html dist/ 2>/dev/null || true
+        
+        # 복사된 파일들 확인
+        echo "배포 폴더 내용:"
+        ls -la dist/
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
