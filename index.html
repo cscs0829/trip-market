@@ -69,12 +69,7 @@
                     <!-- Profile menu will be dynamically created here -->
                 </div>
                 
-                <!-- Mobile Menu Button -->
-                <button class="hamburger-btn" aria-label="메뉴 열기">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+
             </div>
         </nav>
     </header>
@@ -147,7 +142,14 @@
                             <img src="images/products/amigo-swiss-red-train.jpg" alt="스위스 기차 여행">
                             <div class="product_overlay">
                                 <button class="overlay_button" title="위시리스트">♥</button>
-                                <button class="overlay_button" title="장바구니">장바구니</button>
+                                <button class="overlay_button add-to-basket" 
+                                        title="장바구니"
+                                        data-product-id="swiss-train-1"
+                                        data-product-name="스위스 기차 여행 패키지"
+                                        data-product-price="2890000"
+                                        data-product-image="images/products/amigo-swiss-red-train.jpg">
+                                    🛒
+                                </button>
                             </div>
                         </div>
                         <div class="product_content">
@@ -165,7 +167,14 @@
                             <img src="images/products/ultimate-snow-mountain-trekking.jpg" alt="알프스 트레킹">
                             <div class="product_overlay">
                                 <button class="overlay_button" title="위시리스트">♥</button>
-                                <button class="overlay_button" title="장바구니">장바구니</button>
+                                <button class="overlay_button add-to-basket" 
+                                        title="장바구니"
+                                        data-product-id="alps-trek-1"
+                                        data-product-name="알프스 트레킹 모험"
+                                        data-product-price="1650000"
+                                        data-product-image="images/products/ultimate-snow-mountain-trekking.jpg">
+                                    🛒
+                                </button>
                             </div>
                         </div>
                         <div class="product_content">
@@ -183,7 +192,14 @@
                             <img src="images/products/modern-swiss-snow-train.jpg" alt="스위스 설산 기차">
                             <div class="product_overlay">
                                 <button class="overlay_button" title="위시리스트">♥</button>
-                                <button class="overlay_button" title="장바구니">장바구니</button>
+                                <button class="overlay_button add-to-basket" 
+                                        title="장바구니"
+                                        data-product-id="swiss-snow-train-1"
+                                        data-product-name="스위스 설산 기차 여행"
+                                        data-product-price="3120000"
+                                        data-product-image="images/products/modern-swiss-snow-train.jpg">
+                                    🛒
+                                </button>
                             </div>
                         </div>
                         <div class="product_content">
@@ -385,5 +401,6 @@
     <script src="js/auth-modal.js"></script>
     <script src="js/mobile-menu.js"></script>
     <script src="js/main-profile.js"></script>
+    <script src="js/basket.js"></script>
 </body>
 </html>
